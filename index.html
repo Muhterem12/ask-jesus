@@ -33,6 +33,7 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="styleSheet" href="animation.css" />
 
     <script defer src="script.js"></script>
     <title>Ask Jesus</title>
@@ -76,7 +77,7 @@
             />
           </div>
 
-          <div class="answer-part hidden">
+          <div class="answer-part">
             <div class="bio bio-jesus">
               <a
                 class="rick-roll"
@@ -86,7 +87,17 @@
               >
               <img src="jesus2.png" class="jesus-profile" />
             </div>
-            <div class="jesus-answer">Lord can answer any question</div>
+            <div class="jesus-answer">
+              <div class="loading-container hidden">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <p class="jesus-answer-text">
+                hello world! my name is jesus christ, im back again and i will
+                forgive all your sins
+              </p>
+            </div>
           </div>
         </div>
 
