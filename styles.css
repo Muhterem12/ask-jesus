@@ -26,6 +26,7 @@ body {
 .main-jesus {
   height: 90%;
   border-radius: 32px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .text-part {
@@ -71,16 +72,18 @@ body {
 .talk-div::before {
   content: "";
   position: absolute;
-  top: -5px;
+  /* top: -5px;
   left: -5px;
   right: -5px;
-  bottom: -5px;
-  /* top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px; */
+  bottom: -5px; */
+  top: 0px;
+  left: -6px;
+  right: 0px;
+  bottom: -6px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 24px;
   z-index: -1;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
+
+/* CHAT */
