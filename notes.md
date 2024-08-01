@@ -1,0 +1,10 @@
+☦ Eastern Christian Cross &#9766;
+☧ Chi Rho Cross &#9767;
+☨ Patriarchal Cross &#9768;
+☩ Greek Cross &#9769;
+✚ Greek Cross heavy &#10010;
+✙ Greek Cross outline &#10009;  
+☓ Saltire, St.Andrew’s Cross &#9747;
+✝ Latin Roman Cross &#10013;
+✞ Latin Cross 3D shadow &#10014;
+✟ Latin Cross outline &#10015;
