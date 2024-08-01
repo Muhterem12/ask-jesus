@@ -1,38 +1,39 @@
 const answers = [
   "You’re going to hell, don’t even try.",
-  "The answers you seek are beyond your grasp.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "You’re destined for chaos, accept it.",
   "Maybe the answer is to stop asking.",
-  "Your questions are a cosmic joke, enjoy the punchline.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "The divine is laughing at your confusion.",
   "Every question leads to more confusion, deal with it.",
   "The universe has better things to do than answer you.",
-  "You’re on a path to nowhere, enjoy the ride.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "The answer is not what you want to hear.",
   "You might as well ask a brick wall.",
   "Your fate is written in chaos, embrace it.",
-  "The answers are hidden behind a veil of confusion.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "You’re lost in the cosmic shuffle.",
   "Even the divine is baffled by your questions.",
   "You’re destined for a life of unanswered queries.",
   "The answers are out of your reach, and they’re laughing.",
   "Maybe you should try asking a different deity.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "Your journey is a quest for nothing, enjoy the trip.",
   "The cosmic winds blow against you.",
   "You’re swimming in a sea of confusion.",
   "The divine’s not interested in your problems today.",
-  "Your questions are leading to more questions, not answers.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "The universe is indifferent to your plight.",
   "You’re on your own with this one.",
   "The stars have better things to do than guide you.",
-  "Your path is a labyrinth with no exit.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "Even I can’t help you with this mess.",
   "You’re chasing shadows in the cosmic void.",
   "The answer is as elusive as a mirage.",
   "Your fate is a series of unfortunate events.",
   "Maybe the real answer is to stop asking.",
   "The divine has checked out on this one.",
-  "You’re caught in a web of your own making.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "Your quest for answers is a wild goose chase.",
   "The cosmic joke is on you.",
   "You’re out of luck with this question.",
@@ -40,13 +41,13 @@ const answers = [
   "The universe is not amused by your persistence.",
   "Your answers are in the land of ‘maybe’.",
   "You’re adrift in the sea of uncertainty.",
-  "The divine’s patience has run out.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "Your questions are too convoluted to answer.",
   "The stars are laughing at your confusion.",
   "You’re in for a rough ride, cosmic style.",
-  "The answer is to accept that there is none.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "You’re on a wild ride with no destination.",
-  "The cosmic winds are against you today.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "Your fate is to search endlessly for clarity.",
   "The universe is playing a trick on you.",
   "Even the divine is shaking its head.",
@@ -56,13 +57,16 @@ const answers = [
   "You’re stuck in a cosmic loop of confusion.",
   "Your quest for answers is a cosmic dead end.",
   "The answer is beyond your comprehension.",
-  "You’re in the midst of a divine prank.",
+  "The answer is beyond your comprehension.",
+  "The answer is beyond your comprehension.",
+  "The answer is beyond your comprehension.",
   "The cosmic winds are howling against you.",
   "You’re on your own with this cosmic riddle.",
   "Even gods can’t untangle this mess.",
   "Your fate is sealed in confusion.",
   "The divine is enjoying your perplexity.",
   "You’re lost in a maze with no exit.",
+  "🖕🏻 Fuck you, you dont deserve heaven",
   "The universe has given up on your questions.",
   "You’re chasing illusions in the cosmic haze.",
   "The stars have aligned against you.",
@@ -135,11 +139,7 @@ const answers = [
   "Your future is a testament to divine grace and celestial favor.",
   "Heaven’s got a wonderful story unfolding—stay tuned for your role in it!",
   "Your destiny is a divine masterpiece in the making—enjoy the process!",
-  "God’s guidance is like a gentle breeze, steering you towards your true path.",
   "The universe is aligning everything perfectly for your amazing future.",
-  "Your path is illuminated with divine wisdom and celestial joy.",
-  "Heaven’s plan is unfolding with grace and divine timing—trust in it.",
-  "Your future is a beautiful tapestry woven with divine threads of love.",
   "God’s guidance is leading you to a destiny filled with blessings and joy.",
   "The universe is working behind the scenes to bring your dreams to life.",
   "Your destiny is like a radiant star—bright and full of promise.",
@@ -152,4 +152,36 @@ const answers = [
   "Your destiny is a divine journey—enjoy the ride and trust the process!",
 ];
 
-console.log(answers);
+// ! VARIABLES
+const inputField = document.querySelector(".input-ask");
+const jesusAnswer = document.querySelector(".answer-part");
+const jesusAnswerText = document.querySelector(".jesus-answer-text");
+
+// ! GETTING RANDOM NUMBER
+const getRandomAnswer = function () {
+  const answer = Math.floor(Math.random() * answers.length);
+  return answer;
+};
+
+// ! CHECK WHITE SPACE
+const checkWhiteSpace = function () {};
+
+const getAnswer = function () {
+  inputField.addEventListener("keydown", function (e) {
+    // ! WHEN 'ENTER IS PRESSED
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const noSpace = inputField.value.trim();
+
+      // ! CHECK SPACE
+      if (noSpace === "") {
+        alert("Please input a question, DONT MAKE JESUS ANGRY!!!");
+      } else {
+        jesusAnswer.classList.remove("hidden");
+
+        const currentAnswer = answers[getRandomAnswer()];
+        jesusAnswerText.innerHTML = currentAnswer;
+      }
+    }
+  });
+};
