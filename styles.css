@@ -1,0 +1,86 @@
+* {
+  font-family: Merriweather, serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #faf0bf;
+}
+
+.main-container {
+  display: flex;
+  width: 90%;
+  max-width: 3000px;
+  margin: 20px auto;
+  /* background-color: darkgrey; */
+  height: 550px;
+  justify-content: space-between;
+}
+
+.img-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-jesus {
+  height: 90%;
+  border-radius: 32px;
+}
+
+.text-part {
+  display: flex;
+  /* align-items: center;  */
+  /* justify-content: center; */
+  flex: 1;
+  flex-direction: column;
+}
+
+.quote {
+  font-family: "Roboto Mono";
+  font-size: 2rem;
+  color: #444;
+  /* font-family: "Bebas Neue"; */
+}
+
+.owner {
+  font-family: "Bebas Neue";
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #555;
+}
+
+/* SHADOW */
+
+.talk-div {
+  position: relative;
+  text-align: center;
+  background-color: #eee;
+  color: #333;
+  border-radius: 24px;
+
+  /* margin: auto -160px auto 20px; */
+  margin: auto 20px auto 40px;
+  padding: 10px;
+
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.talk-div::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  /* top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px; */
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+  z-index: -1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow appearance */
+}
