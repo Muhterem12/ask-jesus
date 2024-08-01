@@ -9,7 +9,11 @@ const answers = [
   "The universe has better things to do than answer you.",
   "🖕🏻 Fuck you, you dont deserve heaven",
   "The answer is not what you want to hear.",
-  "You might as well ask a brick wall.",
+  "Jesus loves you.",
+  "Jesus loves you.",
+  "Jesus loves you.",
+  "Jesus loves you.",
+  "Jesus loves you.",
   "Your fate is written in chaos, embrace it.",
   "🖕🏻 Fuck you, you dont deserve heaven",
   "You’re lost in the cosmic shuffle.",
@@ -56,6 +60,14 @@ const answers = [
   "The divine has left the building.",
   "You’re stuck in a cosmic loop of confusion.",
   "Your quest for answers is a cosmic dead end.",
+  "The answer is beyond your comprehension.",
+  "The answer is beyond your comprehension.",
+  "The answer is beyond your comprehension.",
+  "The answer is beyond your comprehension.",
+  "The answer is beyond your comprehension.",
+  "The answer is beyond your comprehension.",
+  "The answer is beyond your comprehension.",
+  "The answer is beyond your comprehension.",
   "The answer is beyond your comprehension.",
   "The answer is beyond your comprehension.",
   "The answer is beyond your comprehension.",
@@ -156,6 +168,7 @@ const answers = [
 const inputField = document.querySelector(".input-ask");
 const jesusAnswer = document.querySelector(".answer-part");
 const jesusAnswerText = document.querySelector(".jesus-answer-text");
+const loadingContainer = document.querySelector(".loading-container");
 
 // ! GETTING RANDOM NUMBER
 const getRandomAnswer = function () {
@@ -163,8 +176,17 @@ const getRandomAnswer = function () {
   return answer;
 };
 
+// ! RANDOM NUMBER FOR TIMER
+const time = Math.random() * 3000 + 4000;
+
 // ! CHECK WHITE SPACE
 const checkWhiteSpace = function () {};
+
+// ! MAKE JESUS ANSWER APPEAR
+inputField.addEventListener("click", function () {
+  console.log("click is working");
+  jesusAnswer.classList.remove("hidden");
+});
 
 const getAnswer = function () {
   inputField.addEventListener("keydown", function (e) {
@@ -177,11 +199,36 @@ const getAnswer = function () {
       if (noSpace === "") {
         alert("Please input a question, DONT MAKE JESUS ANGRY!!!");
       } else {
-        jesusAnswer.classList.remove("hidden");
+        console.log("working");
+        loadingContainer.classList.remove("hidden");
+        // jesusAnswer.innerHTML = ""; // * CAUSE OF ERROR // changing all html not text content
+        inputField.value = "";
+        jesusAnswerText.style.color = "#333";
+        jesusAnswerText.classList.add("hidden");
 
-        const currentAnswer = answers[getRandomAnswer()];
-        jesusAnswerText.innerHTML = currentAnswer;
+        setTimeout(function () {
+          jesusAnswerText.classList.remove("hidden");
+          console.log("working after few seconds");
+          // loadingContainer.classList.add("hidden");
+
+          loadingContainer.classList.add("hidden");
+          const currentAnswer = answers[getRandomAnswer()];
+          jesusAnswerText.innerHTML = currentAnswer;
+        }, time);
       }
     }
   });
 };
+
+getAnswer();
+
+// ! HIDE ANSWER PART WHEN CLICKING OUTSIDE
+document.addEventListener("click", function (event) {
+  // Check if the clicked target is outside the question-asking section
+  if (
+    !event.target.closest(".ask-part") &&
+    !event.target.closest(".input-ask")
+  ) {
+    jesusAnswer.classList.add("hidden");
+  }
+});
