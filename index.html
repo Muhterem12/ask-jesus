@@ -33,6 +33,8 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
+
+    <script defer src="script.js"></script>
     <title>Ask Jesus</title>
   </head>
   <body>
@@ -56,7 +58,7 @@
       <section class="chat">
         <div class="chat-part">
           <div class="ask-part">
-            <div class="bio">
+            <div class="bio bio-user">
               <img src="User.png" class="jesus-profile" />
               <a
                 class="rick-roll"
@@ -70,18 +72,19 @@
               type="text"
               class="input-ask"
               placeholder="Ask to jesus..."
+              maxlength="140"
             />
           </div>
 
-          <div class="answer-part">
-            <div class="bio">
-              <img src="jesus2.png" class="jesus-profile" />
+          <div class="answer-part hidden">
+            <div class="bio bio-jesus">
               <a
                 class="rick-roll"
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 target="_blank"
                 >Jesus Christ</a
               >
+              <img src="jesus2.png" class="jesus-profile" />
             </div>
             <div class="jesus-answer">Lord can answer any question</div>
           </div>
