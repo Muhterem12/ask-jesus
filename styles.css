@@ -105,6 +105,7 @@ body {
 .ask-part {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .img-chat {
@@ -138,4 +139,34 @@ body {
 
 .rick-roll:hover {
   color: #666;
+}
+
+.input-ask {
+  background-color: #fff;
+  border: #666 1px solid;
+  padding: 10px 20px;
+  border-radius: 6px;
+  width: 600px;
+  color: #777;
+}
+
+.input-ask:focus {
+  outline: none;
+  border: #777 1px solid;
+  color: #444;
+}
+
+.jesus-answer {
+  background-color: #fff;
+  border: #666 1px solid;
+  padding: 10px 20px;
+  border-radius: 6px;
+  width: 600px;
+  color: #777;
+}
+
+.chat-part {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
