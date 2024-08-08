@@ -225,10 +225,8 @@ getAnswer();
 // ! HIDE ANSWER PART WHEN CLICKING OUTSIDE
 document.addEventListener("click", function (event) {
   // Check if the clicked target is outside the question-asking section
-  if (
-    !event.target.closest(".ask-part") &&
-    !event.target.closest(".input-ask")
-  ) {
+  if (!event.target.closest(".chat-part")) {
     jesusAnswer.classList.add("hidden");
+    jesusAnswerText.innerHTML = "";
   }
 });
