@@ -18,12 +18,12 @@ body {
 
 .main-container {
   display: flex;
-  width: 90%;
+  width: 82%;
   max-width: 3000px;
   margin: 20px auto;
   /* background-color: darkgrey; */
   height: 550px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .img-part {
@@ -72,7 +72,7 @@ body {
   /* margin: auto -160px auto 20px; */
   margin: auto 20px auto 40px;
   padding: 10px;
-  margin-left: 140px;
+  margin-left: 240px;
 
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
@@ -101,7 +101,8 @@ body {
   margin: 20px 100px;
   display: flex;
   height: 550px;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 300px; /* TODO: ADJUST THE GAP */
 }
 
 .ask-part {
@@ -120,7 +121,7 @@ body {
   height: 80%;
   border-radius: 32px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  margin-right: 70px;
+  margin-right: 200px;
 }
 
 .bio {
@@ -136,6 +137,60 @@ body {
 .jesus-profile {
   height: 70px;
   width: 70px;
+}
+
+/* JESUS ONLİNE */
+.jesus-profile-name {
+  position: relative;
+}
+
+.jesus-profile-name::before {
+  top: 25px;
+  right: 55px;
+  position: absolute;
+  content: "";
+
+  padding: 6px;
+  background-color: #51cf66;
+  border-radius: 50%;
+}
+
+.jesus-profile-name::after {
+  top: 22px;
+  right: 5px;
+  position: absolute;
+  content: "Online";
+
+  font-size: 14px;
+  color: #444;
+  border-radius: 50%;
+}
+
+/* USER ONLİNE */
+.user-profile-name {
+  position: relative;
+}
+
+.user-profile-name::before {
+  top: 27px;
+  left: 0px;
+  position: absolute;
+  content: "";
+
+  padding: 6px;
+  background-color: #51cf66;
+  border-radius: 50%;
+}
+
+.user-profile-name::after {
+  top: 24px;
+  left: 16px;
+  position: absolute;
+  content: "Online";
+
+  font-size: 14px;
+  color: #444;
+  border-radius: 50%;
 }
 
 .rick-roll {
@@ -281,7 +336,7 @@ footer {
   color: #1a8ae0;
 }
 
-.logo-github:hover {
+/* .logo-github:hover {
 }
 .logo-linkedin:hover {
-}
+} */
